@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Distance Finder</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </head>
+    <body>
+        <div class="location-inputs">
+            <div class="input-set">
+                <span class="material-symbols-outlined">trip_origin</span>
+                <input class="text-input" id="etOrigin" type="text" placeholder="Enter Origin Address">
+            </div>
+            <div class="input-set">
+                <span class="material-symbols-outlined">location_on</span>
+                <input class="text-input" id="etDest" type="text" placeholder="Enter Destination Address">
+            </div>
+        </div>
+
+        <div id="map"></div>
+        <div id="txtResult"></div>
+        <button id="btnReq" type="button">Submit</button>
+
+        <script type="text/javascript" src="index.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEOUg9fkBSqB3Q5XI6RJg0RRsyHtZiXJM&libraries=places"></script>
+    </body>
+</html>

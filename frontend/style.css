@@ -1,0 +1,67 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.input-set {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.location-inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#map {
+  margin-top: 40px;
+  height: 70vh;
+  border-radius: 15px;
+  margin-right: 80px;
+  margin-left: 80px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.text-input {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  font-size: 15px;
+  border-radius: 3px;
+  border: 0;
+  width: 270px;
+  height: 40px;
+  text-overflow: ellipsis;
+  padding: 0 1em;
+}
+
+#txtResult {
+  font-size: 15px;
+  color: black;
+  margin-left: 80px;
+  text-overflow: ellipsis;
+}
+
+#btnReq {
+  background-color: #4CAF50; 
+  border-radius: 6px;
+  color: white;
+  padding: 15px 32px;
+  border: #4CAF50;
+  margin-left: 80px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+}
+
+  
