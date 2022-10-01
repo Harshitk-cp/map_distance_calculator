@@ -5,7 +5,7 @@
   "main": "backend/server.js",
   "scripts": {
     "start": "node backend/server.js",
-    "test": "mocha"
+    "test": "mocha backend/test/**.js"
   },
   "author": "",
   "license": "ISC",

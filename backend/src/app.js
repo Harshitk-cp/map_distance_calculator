@@ -14,6 +14,9 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(STATIC_FOLDER_PATH));
 
+const validate = ({ lat, lng }) =>
+  typeof lat === "number" && typeof lng === "number";
+
 app.post("/getDistance", async (req, res) => {
   const { body } = req;
   if (!body || !body.origin || !body.destination) {
@@ -21,18 +24,7 @@ app.post("/getDistance", async (req, res) => {
     return;
   }
 
-  if (
-    typeof body.origin.lat !== "number" ||
-    typeof body.origin.lng !== "number"
-  ) {
-    res.sendStatus(400);
-    return;
-  }
-
-  if (
-    typeof body.destination.lat !== "number" ||
-    typeof body.destination.lng !== "number"
-  ) {
+  if (!validate(body.origin) || !validate(body.destination)) {
     res.sendStatus(400);
     return;
   }

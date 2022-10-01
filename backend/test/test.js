@@ -4,6 +4,11 @@ import chaiHttp from "chai-http";
 
 import app from "../src/app.js";
 
+if (!process.env.GOOGLE_MAPS_API_KEY) {
+  console.error("Environment variable GOOGLE_MAPS_API_KEY not found.");
+  process.exit(-1);
+}
+
 const { expect } = chai;
 chai.use(chaiHttp);
 
